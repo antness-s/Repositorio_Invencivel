@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/Omniman_logo.png">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.css">
     <title> Invencible Gym </title>
 
 
@@ -36,14 +36,24 @@
             var tel = document.getElementById('tel').value;
 
 
-            if(login == "admin" && senha == "admin" && email == "gabriel@gmail" && tel == "12341234"){
-                alert('Sucesso');
-                location.href = "home.html";
-            }else{
-                alert('Usuario ou senha incorretos');
-            }
+            if (login === "" || senha === "" || email === "" || tel === "") {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
 
-        }
+                if (!email.includes("@") || !email.includes(".")) {
+                    alert("insira um e-mail válido. (Precisa possuir o @ e o .)");
+                    return;
+                }
+
+                if (telefone.length < 8 || isNaN(telefone)) {
+                    alert("O telefone precisa ter pelo menos 8 digitos.");
+                    return;
+                }
+
+                alert('Cadastro realizado com sucesso!');
+                location.href = "indexx.html";
+            }
 
     </script>
 
