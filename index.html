@@ -13,20 +13,28 @@
 <body>
     
 
-    <form>
-
-        <h3>Cadastro</h3>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="Senha" id="senha">
-        <input type="text" placeholder="Email" id="email">
-        <input type="string" placeholder="Telefone" id="tel">
-        <input type="submit" onclick="logar(); return false">
+        <div class="quadrado">
+            <div class="quadrado-form">
+                <form>
+                    <h3>Se Cadastre </h3>
+                    <input type="text" placeholder="Nome de Usuário" id="login" required>
+                    <input type="email" placeholder="E-mail" id="email" required>
+                    <input type="password" placeholder="Senha" id="senha" required>
+                    <input type="tel" placeholder="Telefone" id="tel" required>
+                    <input type="submit" onclick="logar(); return false">
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="assets/474920-invincible51-Photoroom.png" height="600">
+                <img src="assets/474920-invincible51-removebg-preview.png" class="invincible">
+            </div>
+        </div>
 
     </form>
 
 
     <script>
-
+ 
 
         function logar(){
 
@@ -46,7 +54,7 @@
                     return;
                 }
 
-                if (telefone.length < 8 || isNaN(telefone)) {
+                if (tel.length < 8 || isNaN(tel)) {
                     alert("O telefone precisa ter pelo menos 8 digitos.");
                     return;
                 }
