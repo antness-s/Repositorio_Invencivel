@@ -1,20 +1,36 @@
-
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    background-color:rgba(21, 119, 211, 0.884);
+body {
+    background-color: rgba(21, 119, 211, 0.884);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.logo {
+    width: 250px;
+    margin-left: 1100px;
+}
+
+.yellow-theme {
+    background-color: yellow !important;
 }
 
 form {
@@ -22,14 +38,13 @@ form {
     text-align: center;
 }
 
-input{
+input {
     display: block;
     margin: 10px auto;
     width: 250px;
     height: 30px;
     background-color: black;
     color: aliceblue;
-
 }
 
 .quadrado {
@@ -42,40 +57,42 @@ input{
     width: 1200px;
     height: 500px;
     padding: 20px;
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
 }
 
-.quadrado-form {
-    width: 50%;
-    padding: 20px;
+.image-container {
     position: relative;
+    width: 600px;
+    height: 600px;
 }
 
-.invincible{
+.invincible,
+.invincible-alt {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
- position: absolute; 
- top: 20px; 
- right: 635px; 
- width: 200px; 
- height: auto; 
+.invincible-alt {
+    opacity: 0;
+    width: 725px;
+    margin-left: ???;
 
 }
 
-h3 {
-    font-size: 23px; 
-    font-weight: bold;
-    text-align: center;
-    color: black; 
+.yellow-theme .invincible {
+    opacity: 0;
 }
 
-input[type="submit"] {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.yellow-theme .invincible-alt {
+    opacity: 1;
 }
 
-input[type="submit"]:hover {
-    background-color: rgba(255, 221, 0, 1)
+.invincible {
+    width: 570px;
+    margin-top: -200px;
+    margin-left: -100px;
 }

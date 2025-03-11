@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/Omniman_logo.png">
     <link rel="stylesheet" href="index.css">
-    <title> Invencible Gym </title>
-
-
+    <title>Invincible Gym</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="assets/474920-invincible51-removebg-preview.png" alt="Invincible Logo" class="logo">
+    </header>
 
-        <div class="quadrado">
-            <div class="quadrado-form">
-                <form>
-                    <h3>Se Cadastre </h3>
-                    <input type="text" placeholder="Nome de Usuário" id="login" required>
-                    <input type="email" placeholder="E-mail" id="email" required>
-                    <input type="password" placeholder="Senha" id="senha" required>
-                    <input type="tel" placeholder="Telefone" id="tel" required>
-                    <input type="submit" onclick="logar(); return false">
-                </form>
-            </div>
-            <div class="image-container">
-                <img src="assets/474920-invincible51-Photoroom.png" height="600">
-                <img src="assets/474920-invincible51-removebg-preview.png" class="invincible">
-            </div>
+    <div class="quadrado">
+        <div class="quadrado-form">
+            <form>
+                <h3>Se Cadastre</h3>
+                <input type="text" placeholder="Nome de Usuário" id="login" required>
+                <input type="email" placeholder="E-mail" id="email" required>
+                <input type="password" placeholder="Senha" id="senha" required>
+                <input type="tel" placeholder="Telefone" id="tel" required>
+                <input type="submit" onclick="logar(); return false">
+            </form>
         </div>
-
-    </form>
+        <div class="image-container">
+            <img src="assets/474920-invincible51-Photoroom.png" class="invincible">
+            <img src="assets/unnamed.png" class="invincible-alt">
+        </div>
+    </div>
 
     <script type="module">
         // Import the functions you need from the SDKs you need
@@ -74,38 +74,37 @@
         });
 
      </script>
-     
- <script>
 
-        function logar(){
-
+    <script>
+        function logar() {
             var login = document.getElementById('login').value;
             var senha = document.getElementById('senha').value;
             var email = document.getElementById('email').value;
             var tel = document.getElementById('tel').value;
 
-
-                if (login === "" || senha === "" || email === "" || tel === "") {
-                        alert("Por favor, preencha todos os campos.");
-                        return;
-                    }
-
-                    if (!email.includes("@") || !email.includes(".")) {
-                        alert("insira um e-mail válido. (Precisa possuir o @ e o .)");
-                        return;
-                    }
-
-                    if (tel.length < 8 || isNaN(tel)) {
-                        alert("O telefone precisa ter pelo menos 8 digitos.");
-                        return;
-                    }
-
-                    alert('Cadastro realizado com sucesso!');
-                    location.href = "indexx.html";
+            if (login === "" || senha === "" || email === "" || tel === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
             }
 
-    </script>
-    
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Insira um e-mail válido. (Precisa possuir o @ e o .)");
+                return;
+            }
 
+            if (tel.length < 8 || isNaN(tel)) {
+                alert("O telefone precisa ter pelo menos 8 dígitos.");
+                return;
+            }
+
+            alert('Cadastro realizado com sucesso!');
+            location.href = "home.html";
+        }
+
+        setInterval(() => {
+            document.body.classList.toggle('yellow-theme');
+        }, 5000);
+    </script>
 </body>
+
 </html>
