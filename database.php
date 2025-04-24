@@ -8,20 +8,21 @@ class Database {
 
     public function __construct() {
         try {
-            $this->conn = new PDO("mysql:host={$this->host};dbname={$this->DBname}", $this->username, $this->password);
+            $this->conn = new PDO("mysql:host={$this->host};
+            dbname={$this -> DBname}", $this -> username, $this -> password);
 
             
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE_EXCEPTION);
+            $this -> conn -> setAttribute(PDO::ATTR_ERRMODE_EXCEPTION);
         } 
         catch (PDOException $e) {
             die("Erro de conexão: " . 
-            $e->getMessage());
+        $e->getMessage());
         }
     }
 
-    public function getConexao() 
+        public function getConexao() 
     {
-        return $this->conn;
+        return $this -> conn;
     }
 }
 ?>
