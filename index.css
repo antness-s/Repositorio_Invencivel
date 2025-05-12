@@ -26,7 +26,9 @@ header {
 
 .logo {
     width: 250px;
-    margin-left: 1100px;
+    left: 1000px;
+    top: -5px;
+    position: relative;
 }
 
 .yellow-theme {
@@ -36,6 +38,7 @@ header {
 form {
     width: 100%;
     text-align: center;
+
 }
 
 input {
@@ -45,6 +48,22 @@ input {
     height: 30px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+
+}
+
+.enviar {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: yellow;
+
+}
+
+.enviar:hover {
+    /* ✅ Também funciona */
+    background-color: rgba(21, 119, 211, 0.884);
 }
 
 .quadrado {
